@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*-----------------------------grouping elements----------------------*/
+        let arr=[1,2,3,4,5,6];
+        let arr2=[2,4,6,8,0];
+        console.log(...arr,...arr2);
+        /*----------------------------missing number---------------------*/
+         function MissingNumber(arr) {
+    const n = arr.length + 1;
+    const sumn = (n * (n + 1)) / 2;
+
+    let sum = 0;
+    for (let i = 0; i < n - 1; i++) {
+        sum = sum+ arr[i];
+    }
+
+    let missingNumber = sumn - sum;
+
+    return missingNumber;
+}
+
+const arr1 = [1, 2, 5, 4, 6, 8, 7];
+const missingNumber = MissingNumber(arr1);
+console.log("Missing Number: ", missingNumber);
+
+function mass(){
+    let n=arr.length-1;
+
+}
+/*-----------------------------longest string-----------------------------------*/
+function longest(string){
+            let str=string.split(" ");
+            let long=0;
+            let word=null;
+            for(let i=0;i<str.length-1;i++){
+                if(long<str[i].length){
+                    long=str[i].length;
+                    word=str[i];
+                }
+            }
+            return word;
+        }
+        console.log(longest("arun kumarS is born to win"));
+
+        /*--------------------------large num in array---------------------------*/
+        function large(arrr){
+            let max=arrr[0];
+            for(let i=1;i<arrr.length;i++){
+                if(arrr[i]>max)
+                max=arrr[i];
+            }
+            return max;
+        }
+        let arrr=[22,34,32,54,67,45];
+        console.log("Largest num is : " +large(arrr));
+/*--------------------fact-----------------------------*/
+function fact(num){
+            let result=1;
+                if(num==0)
+                return(1);
+            for(let i=2;i<=num;i++)
+            result=result*i;
+        return result;
+        }
+        console.log("factorial of num is : "+fact(4));
+    </script>
+</body>
+</html>
